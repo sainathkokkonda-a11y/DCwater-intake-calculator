@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Intake Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="global-water-container">
+  <div class="global-water-card">
+    <div class="global-water-header">
+      <h2>Water Intake Calculator</h2>
+      <p>Calculate your ideal daily water consumption</p>
+    </div>
+    
+    <div class="global-water-body">
+      <div class="input-group">
+        <label>Your Weight (kg)</label>
+        <input class="global-input" id="waterWeight" type="number" value="68" />
+      </div>
+
+      <div class="input-group">
+        <label>Daily Exercise Time (Minutes)</label>
+        <input class="global-input" id="exerciseTime" type="number" value="30" />
+      </div>
+
+      <div class="input-group">
+        <label>Climate / Weather</label>
+        <select class="global-select" id="climate" onchange="calculateWater()">
+          <option selected value="normal">Normal / Moderate</option>
+          <option value="hot">Hot / Humid (+0.5 Liters)</option>
+        </select>
+      </div>
+
+      <button class="btn-calculate" onclick="calculateWater()">Calculate Water Intake</button>
+
+      <div class="result-box">
+        <div style="color: #1565c0; font-size: 14px; font-weight: 600;">Recommended Daily Water:</div>
+        <div class="water-value" id="waterResult">0.0 Liters</div>
+        <div class="water-subtitle" id="glassesResult">10 Glasses (250ml each)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
